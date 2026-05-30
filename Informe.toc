@@ -1,0 +1,39 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Introducción}{3}{}%
+\contentsline {section}{\numberline {1}Descripción de la Empresa}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Rubro del Negocio}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Misión y Visión}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Misión}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Visión}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Objetivos Estratégicos}{4}{}%
+\contentsline {section}{\numberline {2}Equipo Tecnológico}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Software}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Hardware}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Soluciones}{6}{}%
+\contentsline {section}{\numberline {3}Informe de Madurez Digital}{6}{}%
+\contentsline {section}{\numberline {4}Problemas de la Empresa}{7}{}%
+\contentsline {subsection}{\numberline {4.1}Problema 1}{7}{}%
+\contentsline {subsection}{\numberline {4.2}Solución propuesta}{7}{}%
+\contentsline {subsection}{\numberline {4.3}Problema 2}{8}{}%
+\contentsline {subsection}{\numberline {4.4}Solución propuesta}{8}{}%
+\contentsline {section}{\numberline {5}Propuesta Tecnológica}{8}{}%
+\contentsline {subsection}{\numberline {5.1}Roadmap Tecnológico Inicial}{8}{}%
+\contentsline {section}{\numberline {6}Plan de Gestión del Conocimiento}{9}{}%
+\contentsline {section}{\numberline {7}Definición del Champion y Estrategia de Cambio}{9}{}%
+\contentsline {section}{\numberline {8}Solución del Proyecto}{10}{}%
+\contentsline {subsection}{\numberline {8.1}Alcance de la Tecnología}{10}{}%
+\contentsline {subsection}{\numberline {8.2}Flujo de solución}{11}{}%
+\contentsline {subsubsection}{\numberline {8.2.1}Diagrama de Casos de Uso}{12}{}%
+\contentsline {subsubsection}{\numberline {8.2.2}Diagrama de Secuencia}{13}{}%
+\contentsline {subsection}{\numberline {8.3}Desarrollo del Prototipo Inicial}{14}{}%
+\contentsline {section}{\numberline {9}Metodología Ágil}{16}{}%
+\contentsline {subsection}{\numberline {9.1}Titulo del proyecto}{16}{}%
+\contentsline {subsection}{\numberline {9.2}Diseño de la metodología ágil}{16}{}%
+\contentsline {subsubsection}{\numberline {9.2.1}Roles y Responsabilidades}{17}{}%
+\contentsline {subsection}{\numberline {9.3}Planificación del Proyecto}{17}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Roadmap del proyecto}{17}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Cronograma de actividades y Rituales Ágiles}{18}{}%
+\contentsline {subsubsection}{\numberline {9.3.3}Gestión Visual mediante Kanban}{19}{}%
+\contentsline {section}{\numberline {10}Validación Inicial}{20}{}%
+\contentsline {subsection}{\numberline {10.1}Pruebas preliminares y Retroalimentación}{21}{}%
+\contentsline {section}{\numberline {11}\textbf {ANEXO}}{24}{}%
