@@ -1,0 +1,21 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Introducción}{2}{}%
+\contentsline {section}{Capítulo I}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Descripción de la problemática}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Planteamiento del problema}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Objetivos}{3}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Objetivo General}{3}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Objetivos Específicos}{3}{}%
+\contentsline {section}{Capítulo II}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Marco Teórico}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Antecedentes}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Metodología de desarrollo}{6}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Distribución de Integrantes}{6}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Cronograma de actividades}{6}{}%
+\contentsline {section}{Capítulo III}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Diseño de entorno}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Desarrollo de entorno}{6}{}%
+\contentsline {section}{Resultados}{6}{}%
+\contentsline {section}{Conclusiones}{6}{}%
+\contentsline {section}{Recomendaciones}{6}{}%
+\contentsline {section}{Anexos}{6}{}%

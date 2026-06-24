@@ -1,0 +1,38 @@
+\ProvidesPackage{caratula/caratula}[2026/03/27 v1.3]
+
+\RequirePackage{graphicx}
+\RequirePackage[utf8]{inputenc}
+
+% Comandos de datos
+\newcommand{\titulo}[1]{\def\@titulo{#1}}
+\newcommand{\curso}[1]{\def\@curso{#1}}
+\newcommand{\docente}[1]{\def\@docente{#1}}
+\newcommand{\alumnos}[1]{\def\@alumnos{#1}}
+\newcommand{\fecha}[1]{\def\@fecha{#1}}
+
+\newcommand{\imprimircaratula}{
+    \begin{titlepage}
+        \centering
+        {\Large \textbf{Universidad Tecnológica del Perú}\par}
+        {\Large \textbf{Escuela de Ingeniería}\par}
+        \vfill
+        % Indicamos que el logo está dentro de la carpeta 'caratula'
+        \includegraphics[width=0.45\textwidth]{caratula/Logo_UTP.png}\par
+        \vfill
+        {\Large \textbf{"\@titulo"}\par}
+        \vspace{0.5cm}
+        {\large Proyecto como parte del curso de:\par}
+        {\large \textbf{\@curso}\par}
+        \vfill
+        {\Large \textbf{Docente:}\par}
+        {\normalsize \textbf{\@docente}\par}
+        \vfill
+        {\Large \textbf{Presentan los alumnos:}\par}
+        \vspace{0.3cm}
+        {\normalsize \begin{tabular}{c} \@alumnos \end{tabular}\par}
+        \vfill
+
+        {\Large \textbf{Lima - Perú}\par}
+        {\textbf{\@fecha}\par}
+    \end{titlepage}
+}

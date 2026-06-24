@@ -1,0 +1,260 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- 1. CONFIGURACIÓN DE PÁGINA ---
+\usepackage[left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+
+% --- 2. IDIOMA Y FUENTES ---
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{csquotes}
+
+% --- 3. INTERLINEADO Y SANGRÍA (APA 7) ---
+\usepackage{setspace}
+\doublespacing % Establece interlineado doble en todo el documento
+\setlength{\parindent}{1.27cm} % Sangría de primera línea (Estándar APA es 0.5 pulgadas)
+
+% --- 4. DISEÑO Y GRÁFICOS ---
+\usepackage{caratula/caratula}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage{amssymb}
+
+% --- 5. TABLAS ---
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% --- 6. ENCABEZADOS Y PIES ---
+\usepackage{fancyhdr}
+\usepackage{xcolor} 
+\definecolor{gris_encabezado}{gray}{0.45}
+
+% --- CONFIGURACIÓN DEL ÍNDICE ---
+\usepackage{tocloft}
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{Índice}
+}
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\textcolor{gris_encabezado}{\small Amaya, Aulla , Diaz, Gonzales \& Moron}}
+\fancyfoot[C]{\thepage}
+
+\makeatletter
+\fancypagestyle{lscape}{%
+    \fancyhf{}%
+    \fancyhead[L]{\textcolor{gris_encabezado}{\small Amaya, Aulla , Diaz, Gonzales \& Moron}}%
+    \fancyfoot[C]{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}%
+    \setlength{\footskip}{15pt}%
+}
+\makeatother
+
+% --- 7. CÓDIGO FUENTE ---
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,                 
+    captionpos=b,                    
+    numbers=left,                    
+    frame=single,
+    xleftmargin=1.5em
+}
+
+% --- 8. BIBLIOGRAFÍA ---
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- 9. DATOS ---
+\titulo{Análisis de Datos Financieros para Riesgo Crediticio}
+\alumnos{Amaya Pineda, Sergio Alexander \\ Aulla Gonzales, Jacson Michael \\ Diaz Diaz, Vilma Angelica  \\ Gonzales Martines, Ivan Enrique \\ Moron Pariona, Fabricio}
+\curso{Lenguaje de Programación}
+\docente{Dr. Charles Dummar Camasca Macedo}
+\fecha{2026}
+
+% --- CONFIGURACIÓN DE TÍTULOS ---
+\usepackage{titlesec}
+
+\usepackage{enumitem}
+
+%\titleformat{\section}
+%  {\normalfont\Large\bfseries}{}{0pt}{}
+
+\begin{document}
+
+\thispagestyle{empty}
+\imprimircaratula
+\clearpage
+
+
+\begin{center}
+    \vspace*{3cm}
+    \normalsize \textbf{DEDICATORIA}
+    \vspace{6cm}
+\end{center}
+\hspace{7.9cm}
+\begin{minipage}{\dimexpr\textwidth-8cm}
+    \textcolor{gray}{
+        Le dedicamos este trabajo a nuestros familiares, amigos y compañeros,
+        quienes nos han ayudado a alcanzar nuestros objetivos, apoyándonos y
+        aconsejándonos en circunstancias poco favorables.
+    }
+\end{minipage}
+
+\newpage
+
+\begin{center}
+    \vspace*{3cm}
+    \normalsize \textbf{AGRADECIMIENTOS}
+    \vspace{6cm}
+\end{center}
+\hspace{7.9cm}
+\begin{minipage}{\dimexpr\textwidth-8cm}
+    \textcolor{gray}{
+        Expresamos nuestro sincero agradecimiento a nuestra docente guía, \textbf{Charles Dummar Camasca Macedo}, por su constante apoyo, orientación y dedicación durante el desarrollo de este proyecto.
+    }
+\end{minipage}
+
+\newpage
+
+
+
+% Reiniciamos numeración
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Los índices suelen ir con interlineado sencillo para que no ocupen demasiadas hojas
+\begin{singlespace}
+    \tableofcontents \newpage
+    %\listoffigures \newpage
+    %\listoftables \newpage
+\end{singlespace}
+
+% --- CONTENIDO ---
+
+
+\section*{\centering Introducción}
+\addcontentsline{toc}{section}{Introducción}
+
+El desarrollo de un proyecto de análisis de riesgo crediticio mediante técnicas de Ciencia de Datos permite comprender el comportamiento financiero de los clientes y apoyar la toma de decisiones relacionadas con la aprobación o rechazo de créditos.
+
+Para el desarrollo del proyecto se emplea un conjunto de datos reales correspondientes a clientes con tarjetas de crédito, con el propósito de realizar procesos de exploración, análisis e interpretación de datos. Asimismo, se utilizarán herramientas tecnológicas como Python, Google Colab, Numpy y Pandas, las cuales permitirán procesar grandes volúmenes de información y obtener resultados relevantes para el análisis del riesgo crediticio.
+
+En el Capítulo 1, se presenta la descripción de la problemática relacionada con la evaluación del riesgo crediticio, así como el planteamiento del problema. Además, se establecen los objetivos generales y específicos del proyecto, orientados al análisis de datos y la identificación de patrones asociados al incumplimiento de pagos.
+
+En el Capítulo 2, se desarrolla el marco teórico que sustenta el proyecto, incluyendo los antecedentes relacionados con la Ciencia de Datos, el análisis de riesgo crediticio y las herramientas tecnológicas empleadas. Asimismo, se presenta la metodología de desarrollo, la distribución de funciones de los integrantes y el cronograma de actividades establecido para la ejecución del proyecto.
+
+En el Capítulo 3, se presenta el diseño y el desarrollo del entorno de trabajo utilizado para el análisis de datos, considerando la configuración de las herramientas, la preparación del conjunto de datos y la implementación de los procedimientos de análisis. Además, se muestran los resultados obtenidos a partir de la exploración y procesamiento de la información. Finalmente, se exponen las conclusiones, recomendaciones y anexos correspondientes al desarrollo del proyecto.
+
+
+\newpage
+
+\section*{\centering Capítulo I}
+\addcontentsline{toc}{section}{Capítulo I}
+
+\setcounter{section}{1}
+\setcounter{subsection}{0}
+\subsection{Descripción de la problemática}
+
+En la actualidad, en el sector financiero, distintas entidades emisoras de crédito presentan dificultades al manejar grandes volúmenes de clientes, lo que genera continuamente nuevos riesgos. Esta situación se debe a que muchas instituciones aún procesan el riesgo de incumplimiento basándose en información cruda o en métodos de evaluación ineficientes. En consecuencia, una evaluación deficiente puede ocasionar pérdidas económicas significativas debido al incumplimiento de pagos por parte de los usuarios.
+
+\subsection{Planteamiento del problema}
+
+¿De qué manera el análisis de datos financieros permite predecir el incumplimiento de pago de un cliente al recibir una línea de crédito?
+
+\subsection{Objetivos}
+\subsubsection{Objetivo General}
+
+\begin{itemize}[label=-]
+    \item Desarrollar un software que pueda predecir el riesgo crediticio de los clientes a partir de un análisis de datos financieros.
+\end{itemize}
+
+\subsubsection{Objetivos Específicos}
+
+\begin{itemize}[label=-]
+    \item Estudiar datos y variables de la dataset para luego poder interpretar los factores que están relacionados con el incumplimiento de pagos de los clientes.
+    \item Evaluar las variables que más influyen sobre el riesgo crediticio de cada usuario.
+    \item Analizar el rendimiento del software mediante diversas métricas.
+\end{itemize}
+
+\section*{\centering Capítulo II}
+\addcontentsline{toc}{section}{Capítulo II}
+
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+\subsection{Marco Teórico}
+
+\begin{itemize}[label=-]
+    \item \textbf{Riesgo Crediticio:}\\
+          Consiste en que una persona no cumple con sus obligaciones de pagar sus deudas en un determinado tiempo que se ha establecido, esta información la utiliza las empresas financieras para poder evaluar este riesgo antes de poder otorgarle créditos, con tal de que se pueda reducir las pérdidas económicas
+    \item \textbf{Ciencia de Datos:}\\
+          Permite el análisis de una gran cantidad de datos sobre información relevante y valiosa mediante diferentes técnicas como es la estadística y programación, para poder conocer y evaluar los patrones y tendencias que sirven para la correcta toma de decisiones.
+    \item \textbf{Regresión logística:}\\
+          Es un algoritmo que permite poder calcular cuál es la probabilidad de que ocurra un evento, poder predecir resultados, con respecto a los riesgos crediticios, se utiliza para poder verificar y evaluar la probabilidad de que si un cliente cumple o no con sus obligaciones financieras.
+    \item \textbf{Python:}\\
+          Este lenguajes de programación está especializado para el procesamiento de datos en los diferentes conceptos como es en la Ciencia de Datos y análisis estadístico sobre grandes cantidades de volúmenes de información.
+    \item \textbf{Google Colab:}\\
+          Es una plataforma en la nube donde podemos ejecutar código Python de manera interactiva, brinda diferentes funciones y facilita la colaboración de proyectos sobre el análisis de datos.
+    \item \textbf{Pandas:}\\
+          Es una biblioteca de Python que organiza la información que se analiza de manera estructurada. Se encarga de gestionar eficientemente los datos para realizar limpieza de estos, como es la eliminación de duplicados.
+    \item \textbf{Numpy:}\\
+          Es una biblioteca de Python que permite calcular operaciones matemáticas complejas que son de alto rendimiento para las grandes cantidades de información.
+    \item \textbf{Matplotlib:}\\
+          Es una biblioteca que se utiliza para la visualización de datos en Python en el cual ofrece la creación de una variedad de gráficos estadísticos, estáticos, dinámicos y así poder analizar los resultados que se obtengan de los datos y facilitar su interpretación.
+    \item \textbf{Kaggle:}\\
+          Es una plataforma de Ciencia de Datos en el cual se puede explorar, acceder a los conjuntos de datos y recursos que proporciona, que sirven para la recolección de datos en los proyectos analíticos. Para este proyecto se utiliza para obtener datos sobre el incumplimiento de las tarjetas de crédito que sirven para analizar al tema principal sobre el riesgo crediticio.
+\end{itemize}
+\subsection{Antecedentes}
+
+A nivel internacional, \textcite{torres2024analisis} desarrollaron una investigación titulada "Análisis del riesgo crediticio y su incidencia en la liquidez de las cooperativas de ahorro y crédito del segmento 1 de la Ciudad de Loja". El estudio tuvo como objetivo analizar cómo el riesgo crediticio incide en la liquidez de estas instituciones financieras. La metodología aplicada fue de tipo analítica, descriptiva y correlacional , utilizando la recolección de información financiera y un modelo de regresión lineal mediante mínimos cuadrados ordinarios para determinar la incidencia del riesgo en las variables dependientes. Los resultados del análisis de datos demostraron que los índices de liquidez y morosidad presentan una correlación positiva del 26,17\%. A partir de estos hallazgos estadísticos, las autoras concluyeron que la implementación de estrategias, políticas y procedimientos adecuados adoptados por cada institución favorece significativamente a la reducción de los riesgos crediticios futuros.
+
+\subsection{Metodología de desarrollo}
+\subsubsection{Distribución de Integrantes}
+\subsubsection{Cronograma de actividades}
+
+\section*{\centering Capítulo III}
+\addcontentsline{toc}{section}{Capítulo III}
+
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\subsection{Diseño de entorno}
+\subsection{Desarrollo de entorno}
+
+\section*{\centering Resultados}
+\addcontentsline{toc}{section}{Resultados}
+
+\section*{\centering Conclusiones}
+\addcontentsline{toc}{section}{Conclusiones}
+
+\section*{\centering Recomendaciones}
+\addcontentsline{toc}{section}{Recomendaciones}
+
+\section*{\centering Anexos}
+\addcontentsline{toc}{section}{Anexos}
+
+\printbibliography
+
+\end{document}
