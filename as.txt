@@ -1,0 +1,58 @@
+puente:
+interface {metodoBajo}
+
+class "concreta" imple "interface" {metodoBajoEje} x2x3x4
+
+abstract class "base" {protected Interface interface; constr(Interface inter){this.interface = inter}; abstrap metodoAlto}
+
+class "hijo" extends "base" {constr(Interface inter){super(inter)}; metodoAltoEje{interface.metodoBajo}}
+
+proxi:
+interface {metodo}
+
+class "real" imple "interface" {metodoeje}
+
+class "proxi" imple "interface" {ini real; metodoeje{real.metodoeje}}
+
+state:
+interface {metodoComportamiento}
+
+class "EstadoA" imple "interface" {metodoComportamientoEje_A} 
+class "EstadoB" imple "interface" {metodoComportamientoEje_B} 
+
+class "Contexto" {
+    private Interface estado; 
+    constr(Interface e){this.estado = e}; 
+    setEstado(Interface e){this.estado = e}; 
+    accion{estado.metodoComportamiento}
+}
+
+observer:
+interface {update}
+
+class "ObservadorConcreto" imple "interface" {updateEje} x2x3x4
+
+class "Sujeto" {
+    List<interface> observadores; 
+    add(interface o){observadores.add(o)}; 
+    remove(interface o){observadores.remove(o)}; 
+    notify{ for(o in observadores) { o.update() } }
+}
+
+command:
+
+interface {execute}
+
+class "Receptor" {accionFisica}
+
+class "ComandoConcreto" imple "interface" {Receptor r; constr(Receptor r){this.r = r}; execute{r.accionFisica}}
+
+class "Invocador" {Interface c; setComando(Interface c){this.c = c}; accionar{c.execute}}
+
+Memento
+
+class "Memento" {String estado; constr(String e){this.estado = e}; getEstado()}
+
+class "Originador" {String estado; setEstado(String e){this.estado = e}; guardar{return new Memento(estado)}; restaurar(Memento m){estado = m.getEstado()}}
+
+class "Conserje" {List<Memento> historial; add(Memento m){historial.add(m)}; get(int i){return historial.get(i)}}
